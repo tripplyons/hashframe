@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>HashFrame</title>
+		<meta name="description" content="Store any file as a link without hosting it.">
+		<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
+		<style>
+			body,
+			html {
+				padding: 0;
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+			}
+
+			#frame {
+				border: 0;
+				width: 100%;
+				height: calc(100vh - 32px);
+			}
+
+			#help {
+				position: fixed;
+				bottom: 8px;
+				left: 8px;
+				right: 8px;
+				font-size: 16px;
+				font-family: sans-serif;
+				text-align: center;
+				line-height:16px;
+				height: 16px;
+			}
+
+			a:active,
+			a:hover,
+			a:link,
+			a:visited {
+				color: gray;
+				text-decoration: underline;
+				font-weight: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<iframe src="" style="display:none" id="frame">Your browser doesn't support iframes.</iframe>
+		<div id="help">
+			HashFrame (<a href='/help'>Help</a>)
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
