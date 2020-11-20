@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>HashFrame</title>
-		<meta name="description" content="Store any file as a link without uploading it.">
-		<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon"/>
-	</head>
-	<body>
-		<script>
-			let prefix = '/#data:text/html;base64,'
-			function makeFrame(letter, size) {
-				let a = document.createElement('a')
-				a.href = prefix + btoa(letter.repeat(size) + 'done')
-				a.innerHTML = letter + "<br />"
-				document.body.appendChild(a)
-			}
-			for(let i = 0; i <= 26; i++) {
-				makeFrame(i.toString(36), Math.pow(2, i))
-			}
-		</script>
 
-	</body>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HashFrame</title>
+	<meta name="description" content="Store any file as a link without uploading it.">
+	<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+	<script>
+		let prefix = '/#data:text/html;base64,'
+
+		function makeFrame(letter, size) {
+			let a = document.createElement('a')
+			a.href = prefix + btoa(letter.repeat(size) + 'done')
+			a.innerHTML = letter + "<br />"
+			document.body.appendChild(a)
+		}
+		for (let i = 0; i <= 26; i++) {
+			makeFrame(i.toString(36), Math.pow(2, i))
+		}
+	</script>
+
+</body>
+
 </html>
